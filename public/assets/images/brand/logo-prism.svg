@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" fill="none">
+  <path d="M12 8 L24 20 L12 32 L0 20 Z" fill="#161c26"/>
+  <path d="M12 14 L18 20 L12 26 L6 20 Z" fill="white"/>
+  <text x="30" y="27" font-family="Inter, sans-serif" font-weight="700" font-size="18" fill="#161c26">Prism</text>
+</svg>

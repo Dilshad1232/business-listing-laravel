@@ -1,0 +1,323 @@
+/* ==========================================
+   Lokora 2026 — Custom Animations & Utilities
+   (Tailwind handles all layout/spacing/colors)
+   ========================================== */
+
+/* Brand marquee — linear continuous scroll */
+.brand-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+/* Force thumb nav to follow GLightbox fade timing */
+.glightbox-closing .glightbox-thumb-nav {
+  opacity: 0 !important;
+  transition: opacity 0.15s ease !important;
+}
+.goverlay {
+  transition: opacity 0.3s ease !important;
+}
+.glightbox-thumb-nav {
+  transition: opacity 0.3s ease;
+}
+
+/* Reset */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Preloader */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s;
+}
+.preloader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.glass-dark {
+  background: rgba(22, 28, 38, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Card hover lift */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.12);
+}
+
+/* Image zoom on hover */
+.img-zoom {
+  overflow: hidden;
+}
+.img-zoom img {
+  transition: transform 0.5s ease;
+}
+.img-zoom:hover img {
+  transform: scale(1.06);
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, #fc3c3c, #ff6b6b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Bento grid pattern background */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.bg-grid-dark {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Dot pattern */
+.bg-dots {
+  background-image: radial-gradient(circle, rgba(0,0,0,0.06) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Blob animation */
+@keyframes blob {
+  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+}
+.animate-blob {
+  animation: blob 8s ease-in-out infinite;
+}
+
+/* Float animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Pulse glow */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(252, 60, 60, 0.4); }
+  50% { box-shadow: 0 0 20px 10px rgba(252, 60, 60, 0); }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Slide in from bottom */
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out forwards;
+}
+
+/* Counter number animation helper */
+.counter-value {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Swiper overrides for Tailwind context */
+.swiper {
+  overflow: hidden;
+}
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #d1d5db;
+  opacity: 1;
+  transition: all 0.3s;
+}
+.swiper-pagination-bullet-active {
+  background: #fc3c3c;
+  width: 24px;
+  border-radius: 4px;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  width: 44px !important;
+  height: 44px !important;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  color: #161c26 !important;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 16px !important;
+  font-weight: 700;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #fc3c3c;
+  color: white !important;
+}
+
+/* Vegas wrappers — must be full size inside flex section */
+#heroSection > .vegas-content-scrollable {
+  width: 100% !important;
+  min-height: 100vh !important;
+}
+#heroSection .vegas-content {
+  width: 100% !important;
+  min-height: 100vh !important;
+  position: relative !important;
+}
+
+/* Vegas overlay */
+.vegas-overlay {
+  background: linear-gradient(180deg, rgba(22,28,38,0.6) 0%, rgba(22,28,38,0.8) 100%);
+}
+
+/* Scroll to top */
+.scroll-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  display: none;
+}
+
+/* Search overlay */
+.search-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.search-popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+.search-popup__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(22, 28, 38, 0.8);
+  backdrop-filter: blur(4px);
+}
+
+/* Side menu */
+.side-menu__block {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.side-menu__block.active {
+  visibility: visible;
+  opacity: 1;
+}
+.side-menu__block-inner {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 340px;
+  max-width: 90vw;
+  background: white;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.3s;
+  scrollbar-width: thin;
+}
+.side-menu__block.active .side-menu__block-inner {
+  transform: translateX(0);
+}
+
+/* Sticky nav */
+.nav-sticky {
+  transition: all 0.3s;
+}
+.nav-sticky.scrolled {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+/* Scrolled nav — switch text from white to dark */
+.nav-sticky.scrolled .nav-logo {
+  color: #161c26 !important;
+}
+.nav-sticky.scrolled .nav-link {
+  color: rgba(22, 28, 38, 0.75) !important;
+}
+.nav-sticky.scrolled .nav-link:hover {
+  color: #161c26 !important;
+  background: rgba(22, 28, 38, 0.05) !important;
+}
+.nav-sticky.scrolled .nav-icon {
+  color: rgba(22, 28, 38, 0.6) !important;
+}
+.nav-sticky.scrolled .nav-icon:hover {
+  color: #161c26 !important;
+  background: rgba(22, 28, 38, 0.05) !important;
+}
+.nav-sticky.scrolled .nav-mobile-toggle {
+  color: #161c26 !important;
+}
+
+/* Badge pulse */
+@keyframes badge-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Typing cursor for Typed.js */
+.typed-cursor {
+  color: #fc3c3c;
+  font-weight: 300;
+}
+
+/* Star rating */
+.star-filled { color: #fbbf24; }
+.star-empty { color: #d1d5db; }
+
+/* Smooth link transitions */
+a {
+  transition: color 0.2s ease;
+}
+
+/* Focus ring for accessibility */
+:focus-visible {
+  outline: 2px solid #fc3c3c;
+  outline-offset: 2px;
+}

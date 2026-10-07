@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" fill="none">
+  <rect x="2" y="10" width="10" height="10" rx="2" fill="#161c26"/>
+  <rect x="14" y="10" width="10" height="10" rx="2" fill="#161c26" opacity="0.6"/>
+  <rect x="2" y="22" width="10" height="10" rx="2" fill="#161c26" opacity="0.6"/>
+  <rect x="14" y="22" width="10" height="10" rx="2" fill="#161c26"/>
+  <text x="32" y="27" font-family="Inter, sans-serif" font-weight="700" font-size="18" fill="#161c26">Nexus</text>
+</svg>

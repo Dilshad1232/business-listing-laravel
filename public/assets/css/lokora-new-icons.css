@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "lokora-new-icon";
+  src: url("../fonts/lokora-new-icon.eot?i0jggx");
+  src: url("../fonts/lokora-new-icon.eot?i0jggx#iefix")
+      format("embedded-opentype"),
+    url("../fonts/lokora-new-icon.ttf?i0jggx") format("truetype"),
+    url("../fonts/lokora-new-icon.woff?i0jggx") format("woff"),
+    url("../fonts/lokora-new-icon.svg?i0jggx#lokora-new-icon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="lokora-new-icon-"],
+[class*=" lokora-new-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "lokora-new-icon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.lokora-new-icon-restaurant:before {
+  content: "\e900";
+}

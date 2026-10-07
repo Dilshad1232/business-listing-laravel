@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" fill="none">
+  <circle cx="12" cy="20" r="10" fill="#161c26"/>
+  <circle cx="12" cy="20" r="5" fill="white"/>
+  <text x="28" y="27" font-family="Inter, sans-serif" font-weight="700" font-size="18" fill="#161c26">Horizon</text>
+</svg>
